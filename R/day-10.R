@@ -15,13 +15,13 @@ conus = USAboundaries::us_states() %>%
 
 comb_us = st_combine(conus) %>%
   st_cast("MULTILINESTRING") %>%
-  plot(comb_us)
+  plot()
 
 # Assignment 2: dissolve the internal US boundaries
 
 diss_us = st_union(conus) %>%
   st_cast("MULTILINESTRING") %>%
-  plot(diss_us)
+  plot()
 
 
 
